@@ -461,4 +461,4 @@ Bei Fragen oder Problemen:
 
 ---
 
-**Built with ❤️ using Jetpack Compose & Clean Architecture**
+**Built by Belkis Aslani using Jetpack Compose & Clean Architecture**
