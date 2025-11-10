@@ -29,7 +29,7 @@ Eine moderne Android-App zum Verwalten, Anpassen und Nutzen von KI-Prompts mit d
   <img src="https://raw.githubusercontent.com/BEKO2210/Prompt-Manager_Android-App/main/assets/Live_preview%20(2).jpg" width="19%">
 </p>
 
-# Prompt Manager - Download v1.1
+# Prompt Manager - Download v1.0
 
 <p align="center">
   <a href="https://github.com/BEKO2210/Prompt-Manager_Android-App/raw/main/APK/PromptManager.apk">
@@ -44,6 +44,37 @@ Eine moderne Android-App zum Verwalten, Anpassen und Nutzen von KI-Prompts mit d
     <img src="https://img.shields.io/badge/📦%20Download%20APK-v1.1-blue?style=for-the-badge&logo=android&logoColor=white" alt="Download APK">
   </a>
 </p>
+## 🧾 Changelog
+
+### 📦 Version 1.1
+
+1. **Dropdown-Menü für Platzhalter**  
+   • Platzhalter können jetzt **vordefinierte Optionen** enthalten:  
+     Beispiel → `[Tier=Vogel, Affe, Tiger, Gorilla]`  
+   • Beim Nutzen des Prompts erscheint automatisch ein **Dropdown-Menü**  
+     zur Auswahl einer der Optionen  
+   • Spart Zeit, vermeidet Tippfehler und macht die Prompts interaktiver  
+   • Duplikate werden automatisch zusammengeführt  
+
+2. **PlaceholderParser**  
+   • Erkennt `[Label=Default]`, `[Label]` **und Dropdown-Varianten**  
+   • Extrahiert eindeutige Platzhalter & prüft Syntax  
+   • Ersetzt Platzhalter mit Benutzereingaben oder Dropdown-Auswahl  
+
+3. **PlaceholderDialog (Dynamische UI)**  
+   • Automatische Generierung der Eingabefelder (Text oder Dropdown)  
+   • Intelligente MultiLine-Erkennung bei langen Eingaben  
+   • Live-Preview & „Defaults wiederherstellen“-Button  
+   • Finaler Prompt landet direkt in der Zwischenablage  
+
+4. **Room Database (Schema v1)**  
+   • Speicherung aller Prompts inkl. Kategorien, Favoriten & Nutzung  
+   • Vorbereitet für Tags, Nutzungshistorie & **Versionierung**  
+
+5. **Repository Pattern**  
+   • Einheitliche Daten-API (CRUD)  
+   • Saubere Trennung von UI & Logik  
+   • Mockbar & testfreundlich  
 
 
 
