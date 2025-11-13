@@ -42,7 +42,7 @@ Eine moderne Android-App zum Verwalten, Anpassen und Nutzen von KI-Prompts mit d
 </p>
 
 
-# Prompt Manager - Download v1.0
+# Prompt Manager - Download v1.0 #old
 
 <p align="center">
   <a href="https://github.com/BEKO2210/Prompt-Manager_Android-App/raw/main/APK/PromptManager.apk">
@@ -50,7 +50,7 @@ Eine moderne Android-App zum Verwalten, Anpassen und Nutzen von KI-Prompts mit d
   </a>
 </p>
 
-# Prompt Manager - Download v1.1 NEW
+# Prompt Manager - Download v1.1 #old
 
 <p align="center">
   <a href="https://github.com/BEKO2210/Prompt-Manager_Android-App/raw/main/APK/Prompt_Master_1_1.apk">
@@ -90,7 +90,7 @@ Eine moderne Android-App zum Verwalten, Anpassen und Nutzen von KI-Prompts mit d
    • Mockbar & testfreundlich  
 
 
-# Prompt Manager - Download v1.1 NEW
+# Prompt Manager - Download v1.3 NEW
 
 <p align="center">
   <a href="https://github.com/BEKO2210/Prompt-Manager_Android-App/blob/main/APK/Prompt%20Manager_1.3.apk">
