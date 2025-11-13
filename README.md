@@ -157,6 +157,101 @@ Eine moderne Android-App zum Verwalten, Anpassen und Nutzen von KI-Prompts mit d
 - **Standard-Wert-Anzeige**: Zeigt ursprünglichen Default als Hinweistext
 - **Validierungs-Feedback**: Sofortige visuelle Rückmeldung bei fehlenden Werten
 
+### 🎨 View/Edit Screen Separation (Neu!)
+
+Die App nutzt jetzt ein modernes **zwei-Screen-System** für bessere Übersichtlichkeit und Workflow:
+
+#### PromptViewScreen (Read-Only Ansicht)
+- **Schreibgeschützter Modus**: Zeigt Prompt-Details ohne Bearbeitungsmöglichkeit
+- **"Prompt nutzen"-Button**: Öffnet Placeholder-Dialog zum Ausfüllen und Kopieren
+- **Edit-FAB**: Floating Action Button für Wechsel in den Bearbeitungsmodus
+- **Versions-Anzeige**:
+  - Badge mit aktueller Versionsnummer (z.B. "v1.2")
+  - Klickbarer Versions-Zähler ("3 Versionen")
+  - Öffnet VersionHistoryBottomSheet
+- **Aktionen**:
+  - Favoriten-Toggle
+  - Duplizieren (mit Bestätigungsdialog)
+  - Löschen (mit Warnung)
+- **Informationsanzeige**:
+  - Kategorie, Beschreibung
+  - Prompt-Inhalt (nicht editierbar)
+  - Erkannte Platzhalter mit Typ-Badges
+  - Nutzungsstatistiken
+
+#### PromptEditScreen (Bearbeitungsmodus)
+- **Vollständige Bearbeitung**: Alle Felder editierbar (Title, Description, Content, Category)
+- **Live-Vorschau mit Farbmarkierung**:
+  - Konfigurierbare Farbschemata (siehe unten)
+  - Palette-Icon zum Wechseln des Farbschemas
+  - Legende passt sich automatisch an
+- **Platzhalter-Erkennung**:
+  - Typ-Badges: ▼ (Dropdown), ≡ (Multiline), T (Text)
+  - Anzeige der Optionenanzahl bei Dropdowns
+  - Default-Wert-Preview
+- **Speichern-Workflow**:
+  - Bei **neuen Prompts**: Direkt speichern als Version 1.0
+  - Bei **bestehenden Prompts**: Versionierungs-Dialog mit 3 Optionen:
+    1. **Kleine Änderung** (Minor): 1.0 → 1.1
+    2. **Große Änderung** (Major): 1.0 → 2.0
+    3. **Als neuer Prompt**: Unabhängige Kopie (v1.0, kein parentId)
+- **Validierung**:
+  - Titel und Inhalt erforderlich
+  - Platzhalter-Syntax-Prüfung
+  - Warnungen bei ungültigen Patterns
+- **Änderungs-Erkennung**:
+  - Speichern-Button nur bei Änderungen
+  - Verwerfen-Dialog beim Zurücknavigieren
+
+#### VersionHistoryBottomSheet
+- **Modal Bottom Sheet** mit allen Versionen eines Prompts
+- **Sortierung**: Chronologisch (neueste zuerst)
+- **Anzeige pro Version**:
+  - Versionsnummer mit Badge
+  - Erstellungsdatum (dd.MM.yyyy HH:mm)
+  - Beschreibung (falls vorhanden)
+  - Nutzungshäufigkeit
+  - Checkmark bei aktueller Version
+  - Highlight der aktuellen Version (farblich)
+- **Navigation**: Klick auf Version öffnet diese in der View
+
+#### Navigation Flow
+```
+Liste → View (ReadOnly) → Edit → Speichern → View (neue/aktualisierte Version)
+  ↓
+Neu erstellen → Edit → Speichern → View
+```
+
+### 🎨 Konfigurierbare Farbschemata (Neu!)
+
+Preview-Farben sind jetzt anpassbar mit **4 vordefinierten Schemata**:
+
+#### 1. **Rot/Grün** (Standard)
+- Leer: Rot (#F44336)
+- Gefüllt: Grün (#00C853)
+- **Verwendung**: Klare, intuitive Farbcodierung
+
+#### 2. **Schwarz/Weiß** (Monochrom)
+- Leer: Grau (#757575)
+- Gefüllt: Schwarz (#212121)
+- **Verwendung**: Professionelle Darstellung, Farbenblinden-freundlich
+
+#### 3. **Weiß/Schwarz** (Invertiert)
+- Leer: Hellgrau (#BDBDBD)
+- Gefüllt: Weiß (#FFFFFF)
+- **Verwendung**: Ideal für Dark Mode
+
+#### 4. **Blau/Orange** (Alternativ)
+- Leer: Blau (#2196F3)
+- Gefüllt: Orange (#FF9800)
+- **Verwendung**: Weniger aufdringlich als Rot/Grün
+
+**Wechsel des Farbschemas**:
+- Palette-Icon (🎨) in der Live-Vorschau
+- Dialog mit allen Optionen und Preview-Beispielen
+- Sofortige Anwendung auf die Vorschau
+- Einstellung pro Bearbeitung (nicht persistent gespeichert)
+
 ---
 
 ## 🏗 Architektur
