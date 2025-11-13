@@ -261,23 +261,23 @@ Die App folgt der **Clean Architecture** mit klarer Trennung von Verantwortlichk
 ```
 ┌─────────────────────────────────────────────────┐
 │            Presentation Layer                   │
-│  (Jetpack Compose UI + ViewModels)             │
-│  • Screens: Liste, Details, Dialoge            │
-│  • ViewModels: State Management mit Flow       │
+│  (Jetpack Compose UI + ViewModels)              │
+│  • Screens: Liste, Details, Dialoge             │
+│  • ViewModels: State Management mit Flow        │
 └────────────────┬────────────────────────────────┘
                  │
 ┌────────────────▼────────────────────────────────┐
 │            Domain Layer                         │
 │  (Business Logic)                               │
 │  • Entities: Placeholder                        │
-│  • Utils: PlaceholderParser, ClipboardHelper   │
+│  • Utils: PlaceholderParser, ClipboardHelper    │
 └────────────────┬────────────────────────────────┘
                  │
 ┌────────────────▼────────────────────────────────┐
 │            Data Layer                           │
 │  (Persistenz & Repositories)                    │
-│  • Room Database mit PromptEntity              │
-│  • Repository Pattern für Datenzugriff         │
+│  • Room Database mit PromptEntity               │
+│  • Repository Pattern für Datenzugriff          │
 └─────────────────────────────────────────────────┘
 ```
 
